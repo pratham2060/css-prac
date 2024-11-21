@@ -1,0 +1,37 @@
+<html>
+<body>
+<button onclick="addToEnd()">Add to End</button>
+<button onclick="addToBeginning()">Add to Beginning</button>
+<button onclick="removeFromEnd()">Remove from End</button>
+<button onclick="removeFromBeginning()">Remove from Beginning</button>
+<script>
+ let array = [1, 2, 3, 4, 5];
+ function displayArray()
+{
+ console.log("Current Array: ", array);
+}
+ function addToEnd()
+{
+let nextelement = array[array.length - 1] + 1;
+ array.push(nextelement); 
+ displayArray();
+ }
+ function addToBeginning() 
+{
+ array.unshift(0); 
+displayArray();
+ }
+ function removeFromEnd() 
+{
+array.pop(); 
+ displayArray();
+ }
+ function removeFromBeginning()
+{
+ array.shift(); 
+ displayArray();
+ }
+ displayArray();
+</script>
+</body>
+</html>

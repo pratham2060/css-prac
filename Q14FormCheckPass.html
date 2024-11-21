@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form onsubmit="register(event)" id="rf">
+Name: <input type="text" required><br><br>
+Employee-ID: <input type="text" required><br><br>
+Email: <input type="email" required><br><br>
+Password: <input type="password" id="pwd" required><br><br>
+Confirm Password: <input type="password" id="cpwd" required><br><br>
+<button type="submit" onchange="register()">Register</button>
+</form>
+<p id="msg"></p>
+<script>
+function register() {
+// e.preventDefault();
+let pass = document.getElementById("pwd").value;
+let confirmPass = document.getElementById("cpwd").value;
+
+if (pass === confirmPass) {
+document.getElementById("msg").innerText = "Registration is successful";
+// document.getElementById("rf").reset();
+} else {
+
+document.getElementById("msg").innerText = "Passwords don't match";
+}
+}
+</script>
+</body>
+</html>

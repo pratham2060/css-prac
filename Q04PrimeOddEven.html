@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+let num;
+document.write("Prime numbers from 1 to 20:");
+for (num = 2; num <= 20; num++) 
+{
+let isPrime = true;
+for (let i = 2; i <= Math.sqrt(num); i++) 
+{
+if (num % i === 0) 
+{
+isPrime = false;
+break;
+}
+}
+if (isPrime) 
+document.write("\t" +num);
+}
+document.write("<br>Even numbers from 21 to 40:");
+num = 22;
+do 
+{
+document.write("\t" +num);
+num += 2; 
+} while (num <= 40);
+document.write("<br>Odd numbers from 41 to 60:");
+num = 41; 
+while (num <= 60) 
+{
+document.write("\t" +num);
+num += 2; // Increment by 2 to get the next odd number
+}
+</script>
+</body>
+</html>

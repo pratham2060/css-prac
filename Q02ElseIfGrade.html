@@ -1,0 +1,30 @@
+<html>
+<body>
+ <h3>Enter your marks:</h3>
+ <input type="number" id="marks">
+ <button onclick="calculateGrade()">Get Grade</button>
+ 
+ <script>
+ function calculateGrade() 
+{
+ let marks = parseInt(document.getElementById("marks").value);
+ let grade;
+ 
+ if (marks >= 75) 
+{
+ grade = "Distinction";
+ alert("Congratulations! You got a Distinction");
+ } 
+else if (marks >= 60) 
+ grade = "First Class";
+ else if (marks >= 50)
+ grade = "Second Class";
+ else if (marks >= 35)
+ grade = "Pass";
+ else 
+ grade = "Fail"; 
+ alert("Your Grade: " + grade);
+ }
+ </script>
+</body>
+</html>

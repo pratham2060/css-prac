@@ -1,0 +1,23 @@
+<html>
+<body>
+ <h3>Enter two numbers:</h3>
+ <input type="number" id="num1">
+ <input type="number" id="num2">
+ <button onclick="performOperations()">Calculate</button>
+ <script>
+ function performOperations() 
+{
+ let num1 = parseInt(document.getElementById("num1").value);
+ let num2 = parseInt(document.getElementById("num2").value);
+ let add = num1 + num2;
+ let subtract = num1 - num2;
+ let multiply = num1 * num2;
+ let divide = num1 / num2;
+ alert("Addition: " + add + "\nSubtraction: " + subtract + "\nMultiplication: " + multiply + 
+"\nDivision: " + divide);
+ if (subtract < 0)
+ alert("Negative Subtraction Result");
+ }
+ </script>
+</body>
+</html>

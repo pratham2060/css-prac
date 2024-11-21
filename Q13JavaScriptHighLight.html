@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Text</title>
+    <style>
+        .highlight {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+<script>
+ const ogstr = "I like JavaScript programming";
+ const highstr = ogstr.replace(
+ "JavaScript",
+ `<span class="highlight"><b><i><u>JAVASCRIPT</u></i></b></span>`
+ );
+ document.write(highstr);
+</script>
+</body>
+</html>
